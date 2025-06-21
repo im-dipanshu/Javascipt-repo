@@ -1,1 +1,12 @@
-console.log("Hello World")
+// console.log("Hello World")
+let date=new Date()
+// console.log(date.toDateString())
+// console.log(date.toISOString())
+// console.log(date.toJSON())
+// console.log(date.toLocaleDateString())
+// console.log(date.toLocaleString())
+// console.log(date.toString())
+// console.log(date.toTimeString())
+//node basics/main.js
+console.log(date.getDate())
+console.log(date.getDay())
