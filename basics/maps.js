@@ -25,7 +25,34 @@
 //     console.log(`${obj} stand for ${object1[obj]}`)
 // }
 
-l=[1,24,5,7,8]
-for (const key in l) {
-    console.log(l[key])
-}
+// l=[1,24,5,7,8]
+// for (const key in l) {
+//     console.log(l[key])
+// }
+
+
+coding=["Python","Java","C++","Ruby","C#"]
+coding.forEach( function (value){
+    // console.log(value);
+    
+} );
+
+
+
+cs=[{
+    name:"Sahil",
+    work:"Driver"
+},{
+    name:"Rudra",
+    work:"Engineer"
+},{
+    name:"Gaurab",
+    work:"Pshycatrist"
+},{
+    name:"Astitva",
+    work:"Pipeline Management"
+}]
+cs.forEach( (el) => {
+    console.log(`The name is ${el.name} and the work is ${el.work}`)
+})
+// node basics/maps.js
