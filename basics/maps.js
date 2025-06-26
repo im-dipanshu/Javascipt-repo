@@ -39,20 +39,57 @@ coding.forEach( function (value){
 
 
 
-cs=[{
-    name:"Sahil",
-    work:"Driver"
-},{
-    name:"Rudra",
-    work:"Engineer"
-},{
-    name:"Gaurab",
-    work:"Pshycatrist"
-},{
-    name:"Astitva",
-    work:"Pipeline Management"
-}]
-cs.forEach( (el) => {
-    console.log(`The name is ${el.name} and the work is ${el.work}`)
-})
+// cs=[{
+//     name:"Sahil",
+//     work:"Driver"
+// },{
+//     name:"Rudra",
+//     work:"Engineer"
+// },{
+//     name:"Gaurab",
+//     work:"Pshycatrist"
+// },{
+//     name:"Astitva",
+//     work:"Pipeline Management"
+// }]
+// cs.forEach( (el) => {
+//     console.log(`The name is ${el.name} and the work is ${el.work}`)
+// })
+
+// const number=[12,45,67,89,34,23]
+// const sum10=number.map((num) => {
+//     return num+10
+// })
+// console.log(sum10)
+
+
+
+
+
+
+
+const shoppingCart = [
+    {
+        itemName: "js course",
+        price: 2999
+    },
+    {
+        itemName: "py course",
+        price: 999
+    },
+    {
+        itemName: "mobile dev course",
+        price: 5999
+    },
+    {
+        itemName: "data science course",
+        price: 12999
+    },
+]
+
+const Total_Price=shoppingCart.reduce((acc,pri) => acc+pri.price,0)
+
+console.log(Total_Price)
+
+
 // node basics/maps.js
