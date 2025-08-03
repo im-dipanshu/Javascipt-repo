@@ -1,21 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div>
-      <h1 class="heading">HI i am learning from chai aur code ok</h1>
-      <p id="title">Lorem ipsum dolor sit amet.</p>
-      <ul>
-        <li>Name</li>
-        <li>Class</li>
-        <li>Roll.no</li>
-        <li>Subject</li>
-      </ul>
-      <input type="password">
-    </div>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body style="background-color: #212121;">
+
+
+    <script>
+
+        const requestUrl = 'https://api.github.com/users/im-dipanshu'
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', requestUrl)
+        xhr.onreadystatechange = function () {
+            console.log(xhr.readyState)
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText)
+                const Name = data.name
+                const Followers = data.following
+                const Bio = data.bio
+
+
+                const opbject = document.createElement('div')
+                opbject.style.width = '100px'
+                opbject.style.height = '200px'
+                opbject.style.backgroundColor = 'Yellow'
+                opbject.style.color = 'green'
+
+                const namePara = document.createElement('p');
+                namePara.textContent = `Name: ${Name}`;
+
+                // Create paragraph for Followers
+                const followersPara = document.createElement('p');
+                followersPara.textContent = `Following: ${Followers}`;
+
+                // Create paragraph for Bio
+                const bioPara = document.createElement('p');
+                bioPara.textContent = `Bio: ${Bio}`;
+
+                // Append all paragraphs to the div
+                opbject.appendChild(namePara);
+                opbject.appendChild(followersPara);
+                opbject.appendChild(bioPara);
+                
+                document.body.appendChild(opbject);
+            }
+        };
+        xhr.send()
+    </script>
+</body>
+
 </html>
